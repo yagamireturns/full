@@ -3,3 +3,19 @@ for gcc:  https://sourceforge.net/projects/gcc-win64/
 for flex:   https://sourceforge.net/projects/gnuwin32/files/flex/2.5.4a-1/flex-2.5.4a-1.exe/download
 
 for bison:   https://sourceforge.net/projects/gnuwin32/files/bison/2.4.1/bison-2.4.1-setup.exe/download
+
+
+
+run:: lex
+
+flex filename.l
+gcc lex.yy.c
+a .exe
+
+
+run yacc
+
+flex filename.l
+bison -dy filename.y
+gcc lex.yy.c t.tab.c
+a.exe
